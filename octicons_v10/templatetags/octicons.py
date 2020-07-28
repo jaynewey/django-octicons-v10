@@ -18,8 +18,7 @@ class Octicon:
         self.set_size(int(attributes.get("width", 0)), int(attributes.get("height", 0)))
 
         # Must check if 24px variant exists as some icons do not have 24px variant
-        self.icon_size = 24 if max(self.attributes["height"], self.attributes["width"]) > 16 and ICON_PATHS.get(
-            icon_name + "-24") else 16
+        self.icon_size = 24 if max(self.attributes["height"], self.attributes["width"]) > 16 and ICON_PATHS.get(icon_name + "-24") else 16
 
         if self.get_path() is None:
             raise KeyError("Could not find data for icon '" + icon_name + "' in icon set.")
@@ -27,6 +26,7 @@ class Octicon:
         self.attributes["class"] = self.get_classes()
         self.attributes["viewBox"] = self.get_view_box()
         self.attributes["fill"] = "currentColor"
+        self.attributes["aria-hidden"] = "true"
 
     def set_size(self, width, height):
         if width > 0 and height > 0:
