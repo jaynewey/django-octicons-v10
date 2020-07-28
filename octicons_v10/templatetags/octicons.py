@@ -11,6 +11,8 @@ with open(Path(__file__).parent / "octicons.json", "r") as f:
 
 
 class Octicon:
+    """Class representing a GitHub Octicon."""
+
     def __init__(self, icon_name, **attributes):
         self.icon_name = icon_name
         self.attributes = attributes
@@ -57,4 +59,12 @@ class Octicon:
 
 @register.simple_tag
 def octicon(icon_name, **attributes):
+    """Returns a html svg element representing the desired GitHub Octicon.
+    Usage e.g: {% octicon "mark-github" width="32" %}
+
+    :param icon_name: The name of the GitHub Octicon e.g "octoface"
+    :type icon_name: str
+    :param attributes: The html attributes to add to the svg element
+    :return: An svg element with the default and applied classes and icon path element
+    """
     return format_html(Octicon(icon_name, **attributes).to_svg())
