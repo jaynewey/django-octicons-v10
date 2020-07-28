@@ -6,6 +6,29 @@ This library aims to provide a similar interface to the official (Jekyll, Ruby, 
 
 [django-octicons](https://github.com/sanketsaurav/django-octicons) is a library that already does this, but currently for an older version of octicons.
 
+## Installation
+
+Upgrade pip:
+
+```
+pip install --upgrade pip
+```
+
+Install the latest version:
+
+```
+pip install django-octicons-v10
+```
+
+Place `octicons_v10` into your installed apps:
+
+```python
+INSTALLED_APPS = [
+    # blah, blah, other apps...
+    "octicons_v10",
+]
+```
+
 ## Usage
 
 Load the `octicons` tag library in your Django template:
