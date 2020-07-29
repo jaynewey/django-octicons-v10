@@ -6,7 +6,7 @@ from pathlib import Path
 register = template.Library()
 
 # Load the octicon path data
-with open(Path(__file__).parent / "octicons.json", "r") as f:
+with open(str(Path(__file__).parent / "octicons.json"), "r") as f:
     ICON_PATHS = load(f)
 
 
