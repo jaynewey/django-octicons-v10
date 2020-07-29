@@ -1,5 +1,10 @@
 # django-octicons-v10
 
+![GitHub](https://img.shields.io/github/license/jaynewey/django-octicons-v10)
+![PyPI](https://img.shields.io/pypi/v/django-octicons-v10)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-octicons-v10)
+
+
 > Django templatetags for [GitHub Octicons](https://primer.style/octicons) v10.0.0.
 
 This library aims to provide a similar interface to the official (Jekyll, Ruby, etc.) octicon libraries provided by GitHub, but as Django templatetags.
