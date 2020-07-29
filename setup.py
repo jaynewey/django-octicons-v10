@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="django-octicons-v10",
-    packages=find_packages(),
+    packages=find_packages(exclude=("tests",)),
     package_data={"octicons_v10": ["templatetags/octicons.json"]},
     version="1.0.3",
     license="MIT",
