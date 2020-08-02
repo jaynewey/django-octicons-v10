@@ -23,7 +23,7 @@ class Octicon:
             self.icon_name, self.icon_size = "-".join(icon_name.split("-")[:-1]), int(icon_name.split("-")[-1])
         else:
             # Must check if 24px variant exists as some icons do not have 24px variant
-            self.icon_name, self.icon_size = icon_name, self.get_icon_size(icon_name)
+            self.icon_name, self.icon_size = icon_name, self._calculate_icon_size(icon_name)
 
         if self.get_path() is None:
             raise KeyError("Could not find data for icon '" + icon_name + "' in icon set.")
@@ -41,7 +41,7 @@ class Octicon:
         else:
             self.attributes["width"], self.attributes["height"] = max(width, height), max(width, height)
 
-    def get_icon_size(self, icon_name):
+    def _calculate_icon_size(self, icon_name):
         if max(self.attributes["height"], self.attributes["width"]) > 16 and ICON_PATHS.get(icon_name + "-24"):
             return 24
         return 16
