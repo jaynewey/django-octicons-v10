@@ -8,7 +8,7 @@
 
 > Django templatetags for [GitHub Octicons](https://primer.style/octicons) v10.0.0.
 
-This library aims to provide a similar interface to the official (Jekyll, Ruby, etc.) octicon libraries provided by GitHub, but as Django templatetags.
+This library aims to provide a similar interface to the official JavaScript and Ruby octicon libraries provided by GitHub, but as Django templatetags.
 
 [django-octicons](https://github.com/sanketsaurav/django-octicons) is a library that already does this, but currently for an older version of octicons.
 
