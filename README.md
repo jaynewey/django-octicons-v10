@@ -17,7 +17,7 @@ This library aims to provide a similar interface to the official (Jekyll, Ruby, 
 Install the latest version:
 
 ```
-pip install django-octicons-v10
+pip3 install django-octicons-v10
 ```
 
 Place `octicons_v10` into your installed apps:
