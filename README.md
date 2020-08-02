@@ -14,12 +14,6 @@ This library aims to provide a similar interface to the official (Jekyll, Ruby, 
 
 ## Installation
 
-Upgrade pip:
-
-```
-pip install --upgrade pip
-```
-
 Install the latest version:
 
 ```
