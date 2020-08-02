@@ -15,7 +15,7 @@ setup(
     author='Jay Newey',
     author_email="jay.newey01@gmail.com",
     url="https://github.com/jaynewey/django-octicons-v10",
-    download_url="https://github.com/jaynewey/django-octicons-v10/archive/v1.0.4.tar.gz",
+    download_url="https://github.com/jaynewey/django-octicons-v10/archive/1.0.4.tar.gz",
     keywords=["octicons", "django", "templatetags"],
     install_requires=[
         "Django>=2.0.0,<3.0.0",
