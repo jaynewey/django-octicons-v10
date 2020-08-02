@@ -14,13 +14,16 @@ class Octicon:
     """Class representing a GitHub Octicon."""
 
     def __init__(self, icon_name, **attributes):
-        self.icon_name = icon_name
         self.attributes = attributes
 
         self.set_size(int(attributes.get("width", 0)), int(attributes.get("height", 0)))
 
-        # Must check if 24px variant exists as some icons do not have 24px variant
-        self.icon_size = 24 if max(self.attributes["height"], self.attributes["width"]) > 16 and ICON_PATHS.get(icon_name + "-24") else 16
+        # Check if manually specified size. (!) This assumes all icon names are in the form {icon_name}-{icon_size}
+        if icon_name in ICON_PATHS.keys():
+            self.icon_name, self.icon_size = "-".join(icon_name.split("-")[:-1]), int(icon_name.split("-")[-1])
+        else:
+            # Must check if 24px variant exists as some icons do not have 24px variant
+            self.icon_name, self.icon_size = icon_name, self._calculate_icon_size(icon_name)
 
         if self.get_path() is None:
             raise KeyError("Could not find data for icon '" + icon_name + "' in icon set.")
@@ -37,6 +40,11 @@ class Octicon:
             self.attributes["width"], self.attributes["height"] = 16, 16
         else:
             self.attributes["width"], self.attributes["height"] = max(width, height), max(width, height)
+
+    def _calculate_icon_size(self, icon_name):
+        if max(self.attributes["height"], self.attributes["width"]) > 16 and ICON_PATHS.get(icon_name + "-24"):
+            return 24
+        return 16
 
     def get_classes(self):
         return ("octicon octicon-" + self.icon_name + " " + self.attributes.get("class", "")).strip()

@@ -73,3 +73,13 @@ You can pass `width` or `height` or both for your desired size:
 If only `width` or `height` is passed, then the other scales accordingly.
 
 Note: The default size is 16px by 16px.
+
+### 16px and 24px variants
+
+The icon variant chosen is dependent on the size specified. If either your width or height is more than 16, then the 24px variant will be chosen.
+
+#### What if I want to specify a variant regardless of size?
+
+If say, you wanted a 32 width icon, but wanted to use the 16px variant, you can do so by specifying the whole variant name, in the form `{ICON_NAME}-{ICON_SIZE}`:
+
+```{% octicon "alert-16" width="32" %}```

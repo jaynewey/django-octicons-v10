@@ -57,3 +57,12 @@ def test_convert_attributes():
     assert 'aria-hidden="true"' in attributes
     assert 'fill="currentColor"' in attributes
     assert 'style="color: #ffffff;"' in attributes
+
+
+def test_manual_px_variant():
+    octicon = Octicon("zap-24")
+    assert octicon.icon_name == "zap" and octicon.attributes["width"] == 16 and octicon.icon_size == 24
+    octicon = Octicon("zap-16", **{"width": "24"})
+    assert octicon.icon_name == "zap" and octicon.attributes["width"] == 24 and octicon.icon_size == 16
+    octicon = Octicon("zap-24", **{"width": "16"})
+    assert octicon.icon_name == "zap" and octicon.attributes["width"] == 16 and octicon.icon_size == 24
