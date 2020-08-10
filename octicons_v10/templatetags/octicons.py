@@ -42,8 +42,9 @@ class Octicon:
             self.attributes["width"], self.attributes["height"] = max(width, height), max(width, height)
 
     def _calculate_icon_size(self, icon_name):
-        if max(self.attributes["height"], self.attributes["width"]) > 16 and ICON_PATHS.get(icon_name + "-24"):
-            return 24
+        if max(self.attributes["height"], self.attributes["width"]) > 16 or not ICON_PATHS.get(icon_name + "-16"):
+            if ICON_PATHS.get(icon_name + "-24"):
+                return 24
         return 16
 
     def get_classes(self):
