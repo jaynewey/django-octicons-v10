@@ -7,7 +7,7 @@ setup(
     name="django-octicons-v10",
     packages=find_packages(exclude=("tests",)),
     package_data={"octicons_v10": ["templatetags/octicons.json"]},
-    version="1.1.0",
+    version="1.1.1",
     license="MIT",
     description="Django templatetags for GitHub Octicons v10.0.0.",
     long_description=long_description,
@@ -15,7 +15,7 @@ setup(
     author='Jay Newey',
     author_email="jay.newey01@gmail.com",
     url="https://github.com/jaynewey/django-octicons-v10",
-    download_url="https://github.com/jaynewey/django-octicons-v10/archive/v1.1.0.tar.gz",
+    download_url="https://github.com/jaynewey/django-octicons-v10/archive/v1.1.1.tar.gz",
     keywords=["octicons", "django", "templatetags"],
     install_requires=[
         "Django>=2.0.0,<3.0.0",
