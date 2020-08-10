@@ -66,3 +66,10 @@ def test_manual_px_variant():
     assert octicon.icon_name == "zap" and octicon.attributes["width"] == 24 and octicon.icon_size == 16
     octicon = Octicon("zap-24", **{"width": "16"})
     assert octicon.icon_name == "zap" and octicon.attributes["width"] == 16 and octicon.icon_size == 24
+
+
+def test_detect_missing_variant():
+    octicon = Octicon("insights")
+    assert octicon.icon_size == 24
+    octicon = Octicon("logo-github", height="24")
+    assert octicon.icon_size == 16
