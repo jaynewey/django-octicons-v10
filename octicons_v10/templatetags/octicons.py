@@ -22,7 +22,6 @@ class Octicon:
         if icon_name in ICON_PATHS.keys():
             self.icon_name, self.icon_size = "-".join(icon_name.split("-")[:-1]), int(icon_name.split("-")[-1])
         else:
-            # Must check if 24px variant exists as some icons do not have 24px variant
             self.icon_name, self.icon_size = icon_name, self._calculate_icon_size(icon_name)
 
         if self.get_path() is None:
@@ -43,6 +42,7 @@ class Octicon:
 
     def _calculate_icon_size(self, icon_name):
         if max(self.attributes["height"], self.attributes["width"]) > 16 or not ICON_PATHS.get(icon_name + "-16"):
+            # Must check if 24px variant exists as some icons do not have 24px variant
             if ICON_PATHS.get(icon_name + "-24"):
                 return 24
         return 16
