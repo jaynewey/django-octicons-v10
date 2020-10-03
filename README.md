@@ -87,3 +87,7 @@ The icon variant chosen is dependent on the size specified. If either your width
 If say, you wanted a 32 width icon, but wanted to use the 16px variant, you can do so by specifying the whole variant name, in the form `{ICON_NAME}-{ICON_SIZE}`:
 
 ```{% octicon "alert-16" width="32" %}```
+
+---
+
+When using the GitHub logos, be sure to follow the [GitHub logo guidelines](https://github.com/logos).
