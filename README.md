@@ -10,7 +10,9 @@
   <img width="800" src="https://user-images.githubusercontent.com/4608155/74476584-77155300-4e5e-11ea-88c6-6c9f64cf0f05.png" alt="Octicons cover" />
 </p>
 
-> Django templatetags for [GitHub Octicons](https://primer.style/octicons) v10.1.0.
+> Django templatetags for [GitHub Octicons](https://primer.style/octicons) v10.0.0+.
+
+Current version `v2.0.0` supports [Octicons v11.0.0](https://github.com/primer/octicons/releases/tag/v11.0.0).
 
 This library aims to provide a similar interface to the official JavaScript and Ruby octicon libraries provided by GitHub, but as Django templatetags.
 
@@ -87,3 +89,7 @@ The icon variant chosen is dependent on the size specified. If either your width
 If say, you wanted a 32 width icon, but wanted to use the 16px variant, you can do so by specifying the whole variant name, in the form `{ICON_NAME}-{ICON_SIZE}`:
 
 ```{% octicon "alert-16" width="32" %}```
+
+---
+
+When using the GitHub logos, be sure to follow the [GitHub logo guidelines](https://github.com/logos).
