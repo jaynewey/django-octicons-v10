@@ -93,3 +93,7 @@ If say, you wanted a 32 width icon, but wanted to use the 16px variant, you can 
 ---
 
 When using the GitHub logos, be sure to follow the [GitHub logo guidelines](https://github.com/logos).
+
+## Issues
+
+Please use the [GitHub issue tracker](https://github.com/jaynewey/django-octicons-v10/issues) to track issues.
