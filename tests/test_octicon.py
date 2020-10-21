@@ -73,3 +73,8 @@ def test_detect_missing_variant():
     assert octicon.icon_size == 24
     octicon = Octicon("logo-github", height="24")
     assert octicon.icon_size == 16
+
+
+def test_keywords():
+    octicon = Octicon("zap")
+    assert octicon.keywords == ["electricity", "lightning", "props", "like", "star", "save"]
