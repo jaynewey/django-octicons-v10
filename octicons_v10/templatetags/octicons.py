@@ -9,6 +9,10 @@ register = template.Library()
 with open(str(Path(__file__).parent / "octicons.json"), "r") as f:
     ICON_PATHS = load(f)
 
+# Load keywords
+with open(str(Path(__file__).parent / "keywords.json"), "r") as f:
+    KEYWORDS = load(f)
+
 
 class Octicon:
     """Class representing a GitHub Octicon."""
@@ -31,6 +35,8 @@ class Octicon:
         self.attributes["viewBox"] = self.get_view_box()
         self.attributes["fill"] = "currentColor"
         self.attributes["aria-hidden"] = "true"
+
+        self.keywords = KEYWORDS.get(self.icon_name) or []
 
     def set_size(self, width, height):
         if width > 0 and height > 0:
