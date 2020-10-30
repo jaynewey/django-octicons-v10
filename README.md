@@ -12,7 +12,7 @@
 
 > Django templatetags for [GitHub Octicons](https://primer.style/octicons) v10.0.0+.
 
-Current version `v2.0.0` supports [Octicons v11.0.0](https://github.com/primer/octicons/releases/tag/v11.0.0).
+Current version `v2.1.0` supports [Octicons v11.0.0](https://github.com/primer/octicons/releases/tag/v11.0.0).
 
 This library aims to provide a similar interface to the official JavaScript and Ruby octicon libraries provided by GitHub, but as Django templatetags.
 
@@ -89,6 +89,16 @@ The icon variant chosen is dependent on the size specified. If either your width
 If say, you wanted a 32 width icon, but wanted to use the 16px variant, you can do so by specifying the whole variant name, in the form `{ICON_NAME}-{ICON_SIZE}`:
 
 ```{% octicon "alert-16" width="32" %}```
+
+### Keywords
+
+Octicons provides a list of keywords for each icon. You can get an `Octicon` instance's keywords by accessing its `keywords` attribute:
+
+```python
+>>> octicon = Octicon("octoface")
+>>> octicon.keywords
+['octocat', 'brand']
+```
 
 ---
 
