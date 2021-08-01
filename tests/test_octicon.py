@@ -69,7 +69,7 @@ def test_manual_px_variant():
 
 
 def test_detect_missing_variant():
-    octicon = Octicon("insights")
+    octicon = Octicon("arrow-down-left")
     assert octicon.icon_size == 24
     octicon = Octicon("logo-github", height="24")
     assert octicon.icon_size == 16
