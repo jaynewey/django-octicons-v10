@@ -18,7 +18,7 @@ setup(
     download_url="https://github.com/jaynewey/django-octicons-v10/archive/v2.3.0.tar.gz",
     keywords=["octicons", "django", "templatetags"],
     install_requires=[
-        "Django>=2.0.0,<3.0.0",
+        "Django>=2.0.0,<4.0.0",
     ],
 
     classifiers=[
