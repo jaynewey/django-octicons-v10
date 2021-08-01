@@ -1,7 +1,7 @@
 # django-octicons-v10
 
 ![GitHub](https://img.shields.io/github/license/jaynewey/django-octicons-v10)
-![Travis (.com)](https://img.shields.io/travis/com/jaynewey/django-octicons-v10)
+[![.github/workflows/main.yml](https://github.com/jaynewey/django-octicons-v10/actions/workflows/main.yml/badge.svg)](https://github.com/jaynewey/django-octicons-v10/actions/workflows/main.yml)
 ![PyPI](https://img.shields.io/pypi/v/django-octicons-v10)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-octicons-v10)
 [![Downloads](https://pepy.tech/badge/django-octicons-v10)](https://pepy.tech/project/django-octicons-v10)
