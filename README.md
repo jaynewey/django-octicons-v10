@@ -12,7 +12,7 @@
 
 > Django templatetags for [GitHub Octicons](https://primer.style/octicons) v10.0.0+.
 
-Current version `v2.3.0` supports [Octicons v11.2.0](https://github.com/primer/octicons/releases/tag/v11.2.0).
+Current version `v3.0.0` supports [Octicons v15.0.0](https://github.com/primer/octicons/releases/tag/v15.0.0).
 
 This library aims to provide a similar interface to the official JavaScript and Ruby octicon libraries provided by GitHub, but as Django templatetags.
 
