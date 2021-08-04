@@ -9,8 +9,9 @@ from squash_paths import squash_paths
 
 def build(build_dir, out_dir):
     # Make clean build directory. Removes all files in this directory!
+    if Path(build_dir).is_dir():
+        rmtree(build_dir)
     Path(build_dir).mkdir(parents=True, exist_ok=True)
-    rmtree(Path(build_dir))
     
     version = fetch_octicons(build_dir, ".tar.gz")
     with tarfile.open(build_dir + "/octicons-" + version + ".tar.gz") as tar:
