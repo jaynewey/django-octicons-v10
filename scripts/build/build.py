@@ -1,7 +1,7 @@
 import tarfile, sys
 
 from pathlib import Path
-from shutil import rmtree
+from shutil import rmtree, copy
 
 from fetch_octicons import fetch_octicons
 from squash_paths import squash_paths
@@ -17,6 +17,9 @@ def build(build_dir, out_dir):
     with tarfile.open(build_dir + "/octicons-" + version + ".tar.gz") as tar:
         tar.extractall(build_dir)
     squash_paths(build_dir + "/octicons-" + version[1:] + "/icons/", out_dir)
+    
+    # copy keywords
+    copy(build_dir + "/octicons-" + version[1:] + "/keywords.json", out_dir + "/keywords.json")
 
 
 if __name__ == "__main__":
