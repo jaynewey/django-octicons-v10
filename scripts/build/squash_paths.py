@@ -29,7 +29,7 @@ def squash_paths(root_dir, out_dir=None):
     for file_name in Path(root_dir).glob("*.svg"):
         print("Squashing " + str(file_name) + "...")
 
-        svg = ET.parse(file_name).getroot()
+        svg = ET.parse(str(file_name)).getroot()
         remove_namespace(svg, "http://www.w3.org/2000/svg")
 
         paths[file_name.stem] = ''.join(ET.tostring(p, encoding="unicode") for p in svg)
