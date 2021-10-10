@@ -69,7 +69,7 @@ class Octicon:
         return html_attributes.strip()
 
     def to_svg(self):
-        return "<svg " + self.convert_attributes() + ">" + self.get_path() + "</svg>"
+        return "<svg xmlns=\"http://www.w3.org/2000/svg\"" + self.convert_attributes() + ">" + self.get_path() + "</svg>"
 
 
 @register.simple_tag
