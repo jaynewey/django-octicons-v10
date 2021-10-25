@@ -107,3 +107,18 @@ When using the GitHub logos, be sure to follow the [GitHub logo guidelines](http
 ## Issues
 
 Please use the [GitHub issue tracker](https://github.com/jaynewey/django-octicons-v10/issues) to track issues.
+
+## Contributing
+
+Contributions are welcome. Please send a pull request through and explain the reasoning behind the change.
+
+### Building
+
+To automatically pull the latest versions of octicons, run:
+
+```sh
+python3 scripts/build/build.py build octicons_v10/templatetags
+```
+
+In the root folder of the repository.
+
