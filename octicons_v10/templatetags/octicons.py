@@ -24,7 +24,8 @@ class Octicon:
 
         # Check if manually specified size. (!) This assumes all icon names are in the form {icon_name}-{icon_size}
         if icon_name in ICON_PATHS.keys():
-            self.icon_name, self.icon_size = "-".join(icon_name.split("-")[:-1]), int(icon_name.split("-")[-1])
+            parts = icon_name.rsplit("-", 1)
+            self.icon_name, self.icon_size = parts[0], int(parts[1])
         else:
             self.icon_name, self.icon_size = icon_name, self._calculate_icon_size(icon_name)
 
